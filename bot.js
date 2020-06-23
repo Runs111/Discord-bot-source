@@ -6,19 +6,19 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
 
-    console.log('I am ready!');
+  bot.user.setStatus('dnd') // Can be 'available', 'idle', 'dnd', or 'invisible'
+    bot.user.setPresence({
+        game: {
+            name: 'DM ME FOR NITRO',
+            type: 0
+        }
+    });
+});
 
 });
 
+
  
-
-client.on('message', message => {
-
-    if (message.content === 'ping') {
-
-       message.reply('pong');
-
-       }
 
 });
 
